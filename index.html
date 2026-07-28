@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jonas van Huyssteen — websites for local businesses</title>
+<meta name="description" content="We're a two-person team building websites for local businesses in and around Antwerp. We build clean, fast websites for barbers, restaurants and shops in and around Antwerp.">
+<meta property="og:title" content="Jonas van Huyssteen — websites for local businesses">
+<meta property="og:description" content="Portfolio of websites built for local businesses.">
+<link rel="stylesheet" href="assets/fonts.css">
+<style>
+:root{
+  --paper:#0B0D0F; --surface:#14181B; --surface2:#1C2127;
+  --ink:#ECEFF1; --muted:#98A3AA; --line:#2A3138; --line-strong:#5A6774;
+  --gold:#C99A3E; --gold-bright:#D9AA4A; --gold-soft:#2A2113;
+  --display:"Space Grotesk",system-ui,sans-serif;
+  --body:Inter,system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);
+  line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);letter-spacing:-.02em;line-height:1.12;margin:0 0 .5em}
+h1{font-size:clamp(2.4rem,6vw,4.2rem)}
+h2{font-size:clamp(1.5rem,3vw,2.1rem)}
+h3{font-size:1.05rem;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+a{color:var(--gold)}
+.mono{font-family:var(--mono);font-feature-settings:"zero" 1}
+
+header{border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10;
+  background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px)}
+header .wrap{display:flex;align-items:center;gap:16px;height:66px}
+.brand{font-family:var(--display);font-weight:700;text-decoration:none;color:var(--ink);
+  display:flex;align-items:center;gap:10px}
+.mark{width:32px;height:32px;display:grid;place-items:center;border:1.5px solid var(--gold);
+  border-radius:8px;color:var(--gold);font-size:.8rem;font-weight:700}
+header nav{margin-left:auto;display:flex;gap:22px;font-size:.9rem}
+header nav a{color:var(--muted);text-decoration:none}
+header nav a:hover{color:var(--gold)}
+
+.hero{padding:clamp(64px,10vw,132px) 0 clamp(40px,6vw,72px)}
+.eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--gold);margin:0 0 1.4em}
+.lede{font-size:clamp(1.05rem,1.8vw,1.3rem);color:var(--muted);max-width:56ch;margin:0 0 32px}
+.stats{display:flex;gap:40px;flex-wrap:wrap;margin-top:44px;padding-top:28px;
+  border-top:1px solid var(--line)}
+.stat b{display:block;font-family:var(--mono);font-size:1.9rem;color:var(--gold);
+  font-weight:600;letter-spacing:-.02em}
+.stat span{font-size:.82rem;color:var(--muted)}
+
+section{padding:clamp(48px,7vw,88px) 0}
+.work-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px;
+  margin-top:38px}
+.piece{background:var(--surface);border:1px solid var(--line);border-radius:12px;
+  overflow:hidden;display:flex;flex-direction:column;transition:border-color .15s ease}
+.piece:hover{border-color:var(--line-strong)}
+.piece-swatch{display:flex;height:74px}
+.sw{flex:1}
+.piece-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:9px;flex:1}
+.meta{color:var(--muted);font-size:.85rem;margin:0;text-transform:capitalize}
+.rate{font-size:.8rem;color:var(--muted);display:flex;gap:6px;align-items:center}
+.stars{color:var(--gold);letter-spacing:1px}
+.tag{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:3px 8px;border-radius:999px;border:1px solid var(--line-strong);color:var(--muted)}
+.tag.live{color:var(--gold);border-color:var(--gold);background:var(--gold-soft)}
+.btn{display:inline-block;margin-top:auto;padding:.62em 1.15em;border-radius:9px;
+  background:var(--gold);color:#14100A;font-weight:600;font-size:.88rem;
+  text-decoration:none;text-align:center}
+.btn:hover{background:var(--gold-bright)}
+.btn-quiet{background:transparent;border:1px solid var(--line-strong);color:var(--muted);
+  font-weight:500}
+.empty{color:var(--muted)}
+
+.booking-section{background:var(--surface);border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line)}
+.calendar{margin-top:34px}
+.cal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+  gap:12px;margin-bottom:26px}
+.cal-day{border:1px solid var(--line);border-radius:11px;padding:12px;
+  background:var(--paper)}
+.cal-head{display:flex;align-items:baseline;gap:7px;margin-bottom:10px}
+.cal-head b{font-family:var(--display);font-size:.95rem}
+.cal-head span{font-family:var(--mono);font-size:.74rem;color:var(--muted)}
+.cal-slots{display:grid;gap:6px}
+.slot{display:block;cursor:pointer}
+.slot input{position:absolute;opacity:0;pointer-events:none}
+.slot span{display:block;text-align:center;padding:6px 4px;border-radius:7px;
+  border:1px solid var(--line-strong);font-family:var(--mono);font-size:.78rem;
+  color:var(--muted);transition:all .12s ease}
+.slot:hover span{border-color:var(--gold);color:var(--ink)}
+.slot input:checked+span{background:var(--gold);border-color:var(--gold);
+  color:#14100A;font-weight:600}
+.slot input:focus-visible+span{outline:2px solid var(--gold);outline-offset:2px}
+.cal-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:12px;margin-bottom:14px}
+.cal-fields label{font-size:.8rem;color:var(--muted);display:grid;gap:5px}
+form.booking{max-width:none;margin:0;text-align:left}
+.cal-note{font-size:.8rem;color:var(--muted);margin:12px 0 0}
+.team{padding:clamp(36px,5vw,60px) 0}
+.team-line{font-size:clamp(1.15rem,2.2vw,1.5rem);font-family:var(--display);
+  letter-spacing:-.015em;line-height:1.4;max-width:34ch;margin:0}
+.how{background:var(--surface);border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px;
+  margin-top:34px;padding:0;list-style:none}
+.steps li{border-top:2px solid var(--gold);padding-top:16px}
+.steps b{display:block;font-family:var(--mono);font-size:.72rem;color:var(--gold);
+  letter-spacing:.14em;margin-bottom:8px}
+.steps p{margin:0;color:var(--muted);font-size:.92rem}
+
+.contact .wrap{max-width:640px;text-align:center}
+.contact .btn{margin-top:22px;display:inline-block;font-size:.98rem;padding:.85em 1.8em}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.or{color:var(--muted);font-size:.82rem;margin:22px 0 16px;position:relative}
+form.request{display:grid;gap:12px;max-width:460px;margin:26px auto 0;text-align:left}
+form.request label{font-size:.8rem;color:var(--muted);display:grid;gap:5px}
+form.request input,form.request textarea{width:100%;padding:.72em .9em;border-radius:9px;
+  border:1px solid var(--line-strong);background:var(--surface2);color:var(--ink);
+  font:inherit;font-size:.92rem}
+form.request textarea{min-height:88px;resize:vertical}
+form.request input:focus,form.request textarea:focus{outline:2px solid var(--gold);
+  outline-offset:1px;border-color:transparent}
+form.request button{margin-top:4px;padding:.8em 1.4em;border:0;border-radius:9px;
+  background:var(--gold);color:#14100A;font:inherit;font-weight:600;cursor:pointer}
+form.request button:hover{background:var(--gold-bright)}
+.hp{position:absolute;left:-9999px}
+.admin-link{color:var(--line-strong);text-decoration:none;font-size:.76rem}
+.admin-link:hover{color:var(--gold)}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.82rem}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:560px){.stats{gap:26px}.piece-swatch{height:60px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="mark">NF</span> newfront</a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#how">How it works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Websites for local businesses</p>
+    <h1>Every local business<br>deserves a front door.</h1>
+    <p class="lede">We're a two-person team building websites for local businesses in and around Antwerp. We build clean, fast websites for barbers,
+       restaurants and shops — the businesses people find on Google but can't
+       find online.</p>
+    <div class="cta-row">
+      <a class="btn" href="#request">Request a website</a>
+      <a class="btn" href="#book">Schedule a meeting</a>
+      <a class="btn btn-quiet" href="#work">See the work</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>13</b><span>sites built</span></div>
+      <div class="stat"><b>13</b><span>live online</span></div>
+      <div class="stat"><b>10</b><span>towns covered</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <h2>Recent builds</h2>
+    <p class="lede">Each one is built from the business's own photographs, its
+       real reviews and its own colours — no template, no stock imagery. Live
+       sites are named; builds still awaiting sign-off are shown by trade.</p>
+    <div class="work-grid">
+      <article class="piece">
+        <div class="piece-swatch"><span class="sw" style="background:#866439"></span><span class="sw" style="background:#6a87ba"></span><span class="sw" style="background:#211d17"></span><span class="sw" style="background:#fbf6f0"></span></div>
+        <div class="piece-body">
+          <h3>Monteleone Barber Shop <span class="tag live">Live</span></h3>
+          <p class="meta">barber · New Orleans</p>
+          <span class="rate"><span class="stars">★★★★</span><span class="mono">4.5</span> · <span class="mono">137</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/monteleone-barber-shop-260/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="piece-swatch"><span class="sw" style="background:#2a2828"></span><span class="sw" style="background:#83848b"></span><span class="sw" style="background:#211717"></span><span class="sw" style="background:#fbf0f0"></span></div>
+        <div class="piece-body">
+          <h3>Bushwick Barbershop <span class="tag live">Live</span></h3>
+          <p class="meta">barber · Los Angeles</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.8</span> · <span class="mono">282</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/bushwick-barbershop-194/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="piece-swatch"><span class="sw" style="background:#84632e"></span><span class="sw" style="background:#525252"></span><span class="sw" style="background:#211d17"></span><span class="sw" style="background:#fbf7f0"></span></div>
+        <div class="piece-body">
+          <h3>LV Barber - Bruxelles <span class="tag live">Live</span></h3>
+          <p class="meta">barber · Bruxelles</p>
+          <span class="rate"><span class="stars">★★★★</span><span class="mono">4.4</span> · <span class="mono">49</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/lv-barber-bruxelles-60/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="piece-swatch"><span class="sw" style="background:#000000"></span><span class="sw" style="background:#ffedc1"></span><span class="sw" style="background:#ffffff"></span><span class="sw" style="background:#6b6b6b"></span></div>
+        <div class="piece-body">
+          <h3>Mido Barber Shop <span class="tag live">Live</span></h3>
+          <p class="meta">barber · Bruxelles</p>
+          <span class="rate"><span class="stars">★★★★</span><span class="mono">4.5</span> · <span class="mono">33</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/mido-barber-shop-57/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="piece-swatch"><span class="sw" style="background:#efdf50"></span><span class="sw" style="background:#f1e051"></span><span class="sw" style="background:#d8f0ff"></span><span class="sw" style="background:#626060"></span></div>
+        <div class="piece-body">
+          <h3>Ari&#x27;s Barbershop Strombeek-bever <span class="tag live">Live</span></h3>
+          <p class="meta">barber · Grimbergen</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">5.0</span> · <span class="mono">42</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/ari-s-barbershop-strombeek-bever-52/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="piece-swatch"><span class="sw" style="background:#f2b36d"></span><span class="sw" style="background:#62676b"></span><span class="sw" style="background:#ffffff"></span><span class="sw" style="background:#0d0d0d"></span></div>
+        <div class="piece-body">
+          <h3>Barber Shop Montana <span class="tag live">Live</span></h3>
+          <p class="meta">salon · Wemmel</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.9</span> · <span class="mono">152</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/barber-shop-montana-44/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="piece-swatch"><span class="sw" style="background:#946533"></span><span class="sw" style="background:#1088f8"></span><span class="sw" style="background:#211c17"></span><span class="sw" style="background:#fbf6f0"></span></div>
+        <div class="piece-body">
+          <h3>Fade kings barber shop <span class="tag live">Live</span></h3>
+          <p class="meta">barber · Lynnwood</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.6</span> · <span class="mono">1309</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/fade-kings-barber-shop-125/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="piece-swatch"><span class="sw" style="background:#4b7481"></span><span class="sw" style="background:#b57647"></span><span class="sw" style="background:#171f21"></span><span class="sw" style="background:#f0f8fb"></span></div>
+        <div class="piece-body">
+          <h3>Downtown Barbershop Visalia <span class="tag live">Live</span></h3>
+          <p class="meta">barber · Visalia</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.8</span> · <span class="mono">50</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/downtown-barbershop-visalia-77/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="piece-swatch"><span class="sw" style="background:#916826"></span><span class="sw" style="background:#f8423b"></span><span class="sw" style="background:#211d17"></span><span class="sw" style="background:#fbf7f0"></span></div>
+        <div class="piece-body">
+          <h3>BarberStarz Barbershop <span class="tag live">Live</span></h3>
+          <p class="meta">barber · Fresno</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.6</span> · <span class="mono">385</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/barberstarz-barbershop-67/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="piece-swatch"><span class="sw" style="background:#000000"></span><span class="sw" style="background:#226cb9"></span><span class="sw" style="background:#211a17"></span><span class="sw" style="background:#fbf4f0"></span></div>
+        <div class="piece-body">
+          <h3>Kapsalon Efsane <span class="tag live">Live</span></h3>
+          <p class="meta">barber · Antwerpen</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.8</span> · <span class="mono">161</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/kapsalon-efsane-347/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="piece-swatch"><span class="sw" style="background:#1d447e"></span><span class="sw" style="background:#d05d88"></span><span class="sw" style="background:#171b21"></span><span class="sw" style="background:#f0f4fb"></span></div>
+        <div class="piece-body">
+          <h3>ABC Barber Shop <span class="tag live">Live</span></h3>
+          <p class="meta">barber · Antwerpen</p>
+          <span class="rate"><span class="stars">★★★★</span><span class="mono">4.5</span> · <span class="mono">163</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/abc-barber-shop-80/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="piece-swatch"><span class="sw" style="background:#856636"></span><span class="sw" style="background:#4187dd"></span><span class="sw" style="background:#211d17"></span><span class="sw" style="background:#fbf7f0"></span></div>
+        <div class="piece-body">
+          <h3>La Balayage Antwerp <span class="tag live">Live</span></h3>
+          <p class="meta">salon · Antwerpen</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.7</span> · <span class="mono">79</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/la-balayage-antwerp-334/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="piece-swatch"><span class="sw" style="background:#8c6a20"></span><span class="sw" style="background:#0194bf"></span><span class="sw" style="background:#211e17"></span><span class="sw" style="background:#fbf8f0"></span></div>
+        <div class="piece-body">
+          <h3>Family Dentist New York <span class="tag live">Live</span></h3>
+          <p class="meta">dentist · New York</p>
+          <span class="rate"><span class="stars">★★★★</span><span class="mono">4.3</span> · <span class="mono">4</span> reviews</span>
+          <a class="btn" href="https://family-dentist-new-york-305.netlify.app" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="team">
+  <div class="wrap">
+    <p class="eyebrow">Who you'd be working with</p>
+    <p class="team-line">Two of us. We handle the design, the build, the domain
+       and everything after it goes live — you deal with the same two people
+       start to finish, not a queue.</p>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li><b>01 / Preview</b><p>We build you a real site first, using your own
+        photos and reviews. You see it before we ever talk money.</p></li>
+      <li><b>02 / Walkthrough</b><p>We go through it together on a call. If it
+        isn't for you, you walk away — nothing owed.</p></li>
+      <li><b>03 / Live</b><p>One payment, the domain set up for you, and free
+        monthly service from both of us to fix anything that breaks.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="booking-section" id="book">
+  <div class="wrap">
+    <h2>Book a time</h2>
+    <p class="lede">Pick a slot that suits you. Half an hour, on Google Meet,
+       to walk through what your site would look like.</p>
+    <div class="calendar">
+      <form class="request booking" name="meeting-request" method="POST"
+            data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="meeting-request">
+        <p class="hp"><label>Leave this empty <input name="bot-field"></label></p>
+        <div class="cal-grid">
+<div class="cal-day"><div class="cal-head"><b>Wed</b><span>29 Jul</span></div><div class="cal-slots"><label class="slot"><input type="radio" name="slot" value="2026-07-29 16:00" required><span>16:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-29 16:30" required><span>16:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-29 17:00" required><span>17:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-29 17:30" required><span>17:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-29 18:00" required><span>18:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-29 18:30" required><span>18:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-29 19:00" required><span>19:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-29 19:30" required><span>19:30</span></label></div></div>
+<div class="cal-day"><div class="cal-head"><b>Thu</b><span>30 Jul</span></div><div class="cal-slots"><label class="slot"><input type="radio" name="slot" value="2026-07-30 16:00" required><span>16:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-30 16:30" required><span>16:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-30 17:00" required><span>17:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-30 17:30" required><span>17:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-30 18:00" required><span>18:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-30 18:30" required><span>18:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-30 19:00" required><span>19:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-30 19:30" required><span>19:30</span></label></div></div>
+<div class="cal-day"><div class="cal-head"><b>Fri</b><span>31 Jul</span></div><div class="cal-slots"><label class="slot"><input type="radio" name="slot" value="2026-07-31 16:00" required><span>16:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-31 16:30" required><span>16:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-31 17:00" required><span>17:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-31 17:30" required><span>17:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-31 18:00" required><span>18:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-31 18:30" required><span>18:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-31 19:00" required><span>19:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-31 19:30" required><span>19:30</span></label></div></div>
+<div class="cal-day"><div class="cal-head"><b>Mon</b><span>3 Aug</span></div><div class="cal-slots"><label class="slot"><input type="radio" name="slot" value="2026-08-03 16:00" required><span>16:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-03 16:30" required><span>16:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-03 17:00" required><span>17:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-03 17:30" required><span>17:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-03 18:00" required><span>18:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-03 18:30" required><span>18:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-03 19:00" required><span>19:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-03 19:30" required><span>19:30</span></label></div></div>
+<div class="cal-day"><div class="cal-head"><b>Tue</b><span>4 Aug</span></div><div class="cal-slots"><label class="slot"><input type="radio" name="slot" value="2026-08-04 16:00" required><span>16:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-04 16:30" required><span>16:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-04 17:00" required><span>17:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-04 17:30" required><span>17:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-04 18:00" required><span>18:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-04 18:30" required><span>18:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-04 19:00" required><span>19:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-04 19:30" required><span>19:30</span></label></div></div>
+<div class="cal-day"><div class="cal-head"><b>Wed</b><span>5 Aug</span></div><div class="cal-slots"><label class="slot"><input type="radio" name="slot" value="2026-08-05 16:00" required><span>16:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-05 16:30" required><span>16:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-05 17:00" required><span>17:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-05 17:30" required><span>17:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-05 18:00" required><span>18:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-05 18:30" required><span>18:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-05 19:00" required><span>19:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-05 19:30" required><span>19:30</span></label></div></div>
+<div class="cal-day"><div class="cal-head"><b>Thu</b><span>6 Aug</span></div><div class="cal-slots"><label class="slot"><input type="radio" name="slot" value="2026-08-06 16:00" required><span>16:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-06 16:30" required><span>16:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-06 17:00" required><span>17:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-06 17:30" required><span>17:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-06 18:00" required><span>18:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-06 18:30" required><span>18:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-06 19:00" required><span>19:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-06 19:30" required><span>19:30</span></label></div></div>
+<div class="cal-day"><div class="cal-head"><b>Fri</b><span>7 Aug</span></div><div class="cal-slots"><label class="slot"><input type="radio" name="slot" value="2026-08-07 16:00" required><span>16:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-07 16:30" required><span>16:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-07 17:00" required><span>17:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-07 17:30" required><span>17:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-07 18:00" required><span>18:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-07 18:30" required><span>18:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-07 19:00" required><span>19:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-07 19:30" required><span>19:30</span></label></div></div>
+<div class="cal-day"><div class="cal-head"><b>Mon</b><span>10 Aug</span></div><div class="cal-slots"><label class="slot"><input type="radio" name="slot" value="2026-08-10 16:00" required><span>16:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-10 16:30" required><span>16:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-10 17:00" required><span>17:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-10 17:30" required><span>17:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-10 18:00" required><span>18:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-10 18:30" required><span>18:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-10 19:00" required><span>19:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-10 19:30" required><span>19:30</span></label></div></div>
+<div class="cal-day"><div class="cal-head"><b>Tue</b><span>11 Aug</span></div><div class="cal-slots"><label class="slot"><input type="radio" name="slot" value="2026-08-11 16:00" required><span>16:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-11 16:30" required><span>16:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-11 17:00" required><span>17:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-11 17:30" required><span>17:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-11 18:00" required><span>18:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-11 18:30" required><span>18:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-11 19:00" required><span>19:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-11 19:30" required><span>19:30</span></label></div></div>
+<div class="cal-day"><div class="cal-head"><b>Wed</b><span>12 Aug</span></div><div class="cal-slots"><label class="slot"><input type="radio" name="slot" value="2026-08-12 16:00" required><span>16:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-12 16:30" required><span>16:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-12 17:00" required><span>17:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-12 17:30" required><span>17:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-12 18:00" required><span>18:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-12 18:30" required><span>18:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-12 19:00" required><span>19:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-12 19:30" required><span>19:30</span></label></div></div>
+<div class="cal-day"><div class="cal-head"><b>Thu</b><span>13 Aug</span></div><div class="cal-slots"><label class="slot"><input type="radio" name="slot" value="2026-08-13 16:00" required><span>16:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-13 16:30" required><span>16:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-13 17:00" required><span>17:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-13 17:30" required><span>17:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-13 18:00" required><span>18:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-13 18:30" required><span>18:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-13 19:00" required><span>19:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-13 19:30" required><span>19:30</span></label></div></div>
+        </div>
+        <div class="cal-fields">
+          <label>Your name <input name="name" required placeholder="Marie Dubois"></label>
+          <label>Your business <input name="business" required placeholder="Kapsalon De Schaar"></label>
+          <label>Email or phone <input name="contact" required placeholder="How we reach you"></label>
+        </div>
+        <button type="submit">Request this time</button>
+        <p class="cal-note">We'll confirm by email within a day. Nothing is
+           charged, and the call is no-obligation.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="request">
+  <div class="wrap">
+    <h2>Want one for your business?</h2>
+    <p class="lede" style="margin-inline:auto">Tell us the name of your business
+       and we'll build a preview — free, and yours to look at either way.</p>
+
+    <form class="request" name="website-request" method="POST"
+          data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="website-request">
+      <p class="hp"><label>Leave this empty <input name="bot-field"></label></p>
+      <label>Your business
+        <input name="business" required placeholder="Kapsalon De Schaar"></label>
+      <label>Your name
+        <input name="name" required placeholder="Marie Dubois"></label>
+      <label>Email or phone
+        <input name="contact" required placeholder="How I reach you"></label>
+      <label>Anything I should know <span style="opacity:.7">(optional)</span>
+        <textarea name="message" placeholder="What the site needs to do"></textarea></label>
+      <button type="submit">Send the request</button>
+    </form>
+
+    <div class="or">or</div>
+    <div class="cta-row" style="justify-content:center">
+      <a class="btn" href="#book">Schedule a meeting</a>
+      <a class="btn btn-quiet" href="mailto:newfront.app@gmail.com?subject=Website%20for%20my%20business">Email us directly</a>
+      <a class="btn btn-quiet" href="tel:+32470998877">Call us</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Jonas van Huyssteen</span>
+    <span class="mono">Antwerp</span>
+    <!-- Admin entry. No password lives here on purpose: this page is static,
+         so anything checked in it is readable by every visitor. The link goes
+         to LocalLeads, which does the authenticating. -->
+    <a class="admin-link" href="http://127.0.0.1:8000/" rel="nofollow noopener">Admin</a>
+  </div>
+</footer>
+</body>
+</html>
