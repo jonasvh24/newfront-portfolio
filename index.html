@@ -56,6 +56,14 @@ section{padding:clamp(48px,7vw,88px) 0}
 .piece{background:var(--surface);border:1px solid var(--line);border-radius:12px;
   overflow:hidden;display:flex;flex-direction:column;transition:border-color .15s ease}
 .piece:hover{border-color:var(--line-strong)}
+/* The framed site: rendered at 1280px then scaled, so the card shows the
+   layout a desktop visitor actually sees rather than a squeezed mobile one. */
+.shot{position:relative;height:200px;overflow:hidden;background:#fff;
+  border-bottom:1px solid var(--line)}
+.shot iframe{position:absolute;top:0;left:0;width:1280px;height:1000px;border:0;
+  transform:scale(.256);transform-origin:0 0;pointer-events:none}
+.shot-veil{position:absolute;inset:0;display:block}
+.shot-veil:hover{box-shadow:inset 0 0 0 2px var(--gold)}
 .piece-swatch{display:flex;height:74px}
 .sw{flex:1}
 .piece-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:9px;flex:1}
@@ -160,9 +168,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
       <a class="btn btn-quiet" href="#work">See the work</a>
     </div>
     <div class="stats">
-      <div class="stat"><b>13</b><span>sites built</span></div>
-      <div class="stat"><b>13</b><span>live online</span></div>
-      <div class="stat"><b>10</b><span>towns covered</span></div>
+      <div class="stat"><b>23</b><span>sites built</span></div>
+      <div class="stat"><b>23</b><span>live online</span></div>
+      <div class="stat"><b>15</b><span>towns covered</span></div>
     </div>
   </div>
 </section>
@@ -175,97 +183,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
        sites are named; builds still awaiting sign-off are shown by trade.</p>
     <div class="work-grid">
       <article class="piece">
-        <div class="piece-swatch"><span class="sw" style="background:#866439"></span><span class="sw" style="background:#6a87ba"></span><span class="sw" style="background:#211d17"></span><span class="sw" style="background:#fbf6f0"></span></div>
-        <div class="piece-body">
-          <h3>Monteleone Barber Shop <span class="tag live">Live</span></h3>
-          <p class="meta">barber · New Orleans</p>
-          <span class="rate"><span class="stars">★★★★</span><span class="mono">4.5</span> · <span class="mono">137</span> reviews</span>
-          <a class="btn" href="https://jonasvh24.github.io/monteleone-barber-shop-260/" target="_blank" rel="noopener">View the site &rarr;</a>
-        </div>
-      </article>
-      <article class="piece">
-        <div class="piece-swatch"><span class="sw" style="background:#2a2828"></span><span class="sw" style="background:#83848b"></span><span class="sw" style="background:#211717"></span><span class="sw" style="background:#fbf0f0"></span></div>
-        <div class="piece-body">
-          <h3>Bushwick Barbershop <span class="tag live">Live</span></h3>
-          <p class="meta">barber · Los Angeles</p>
-          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.8</span> · <span class="mono">282</span> reviews</span>
-          <a class="btn" href="https://jonasvh24.github.io/bushwick-barbershop-194/" target="_blank" rel="noopener">View the site &rarr;</a>
-        </div>
-      </article>
-      <article class="piece">
-        <div class="piece-swatch"><span class="sw" style="background:#84632e"></span><span class="sw" style="background:#525252"></span><span class="sw" style="background:#211d17"></span><span class="sw" style="background:#fbf7f0"></span></div>
-        <div class="piece-body">
-          <h3>LV Barber - Bruxelles <span class="tag live">Live</span></h3>
-          <p class="meta">barber · Bruxelles</p>
-          <span class="rate"><span class="stars">★★★★</span><span class="mono">4.4</span> · <span class="mono">49</span> reviews</span>
-          <a class="btn" href="https://jonasvh24.github.io/lv-barber-bruxelles-60/" target="_blank" rel="noopener">View the site &rarr;</a>
-        </div>
-      </article>
-      <article class="piece">
-        <div class="piece-swatch"><span class="sw" style="background:#000000"></span><span class="sw" style="background:#ffedc1"></span><span class="sw" style="background:#ffffff"></span><span class="sw" style="background:#6b6b6b"></span></div>
-        <div class="piece-body">
-          <h3>Mido Barber Shop <span class="tag live">Live</span></h3>
-          <p class="meta">barber · Bruxelles</p>
-          <span class="rate"><span class="stars">★★★★</span><span class="mono">4.5</span> · <span class="mono">33</span> reviews</span>
-          <a class="btn" href="https://jonasvh24.github.io/mido-barber-shop-57/" target="_blank" rel="noopener">View the site &rarr;</a>
-        </div>
-      </article>
-      <article class="piece">
-        <div class="piece-swatch"><span class="sw" style="background:#efdf50"></span><span class="sw" style="background:#f1e051"></span><span class="sw" style="background:#d8f0ff"></span><span class="sw" style="background:#626060"></span></div>
-        <div class="piece-body">
-          <h3>Ari&#x27;s Barbershop Strombeek-bever <span class="tag live">Live</span></h3>
-          <p class="meta">barber · Grimbergen</p>
-          <span class="rate"><span class="stars">★★★★★</span><span class="mono">5.0</span> · <span class="mono">42</span> reviews</span>
-          <a class="btn" href="https://jonasvh24.github.io/ari-s-barbershop-strombeek-bever-52/" target="_blank" rel="noopener">View the site &rarr;</a>
-        </div>
-      </article>
-      <article class="piece">
-        <div class="piece-swatch"><span class="sw" style="background:#f2b36d"></span><span class="sw" style="background:#62676b"></span><span class="sw" style="background:#ffffff"></span><span class="sw" style="background:#0d0d0d"></span></div>
-        <div class="piece-body">
-          <h3>Barber Shop Montana <span class="tag live">Live</span></h3>
-          <p class="meta">salon · Wemmel</p>
-          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.9</span> · <span class="mono">152</span> reviews</span>
-          <a class="btn" href="https://jonasvh24.github.io/barber-shop-montana-44/" target="_blank" rel="noopener">View the site &rarr;</a>
-        </div>
-      </article>
-      <article class="piece">
-        <div class="piece-swatch"><span class="sw" style="background:#946533"></span><span class="sw" style="background:#1088f8"></span><span class="sw" style="background:#211c17"></span><span class="sw" style="background:#fbf6f0"></span></div>
-        <div class="piece-body">
-          <h3>Fade kings barber shop <span class="tag live">Live</span></h3>
-          <p class="meta">barber · Lynnwood</p>
-          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.6</span> · <span class="mono">1309</span> reviews</span>
-          <a class="btn" href="https://jonasvh24.github.io/fade-kings-barber-shop-125/" target="_blank" rel="noopener">View the site &rarr;</a>
-        </div>
-      </article>
-      <article class="piece">
-        <div class="piece-swatch"><span class="sw" style="background:#4b7481"></span><span class="sw" style="background:#b57647"></span><span class="sw" style="background:#171f21"></span><span class="sw" style="background:#f0f8fb"></span></div>
-        <div class="piece-body">
-          <h3>Downtown Barbershop Visalia <span class="tag live">Live</span></h3>
-          <p class="meta">barber · Visalia</p>
-          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.8</span> · <span class="mono">50</span> reviews</span>
-          <a class="btn" href="https://jonasvh24.github.io/downtown-barbershop-visalia-77/" target="_blank" rel="noopener">View the site &rarr;</a>
-        </div>
-      </article>
-      <article class="piece">
-        <div class="piece-swatch"><span class="sw" style="background:#916826"></span><span class="sw" style="background:#f8423b"></span><span class="sw" style="background:#211d17"></span><span class="sw" style="background:#fbf7f0"></span></div>
-        <div class="piece-body">
-          <h3>BarberStarz Barbershop <span class="tag live">Live</span></h3>
-          <p class="meta">barber · Fresno</p>
-          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.6</span> · <span class="mono">385</span> reviews</span>
-          <a class="btn" href="https://jonasvh24.github.io/barberstarz-barbershop-67/" target="_blank" rel="noopener">View the site &rarr;</a>
-        </div>
-      </article>
-      <article class="piece">
-        <div class="piece-swatch"><span class="sw" style="background:#000000"></span><span class="sw" style="background:#226cb9"></span><span class="sw" style="background:#211a17"></span><span class="sw" style="background:#fbf4f0"></span></div>
-        <div class="piece-body">
-          <h3>Kapsalon Efsane <span class="tag live">Live</span></h3>
-          <p class="meta">barber · Antwerpen</p>
-          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.8</span> · <span class="mono">161</span> reviews</span>
-          <a class="btn" href="https://jonasvh24.github.io/kapsalon-efsane-347/" target="_blank" rel="noopener">View the site &rarr;</a>
-        </div>
-      </article>
-      <article class="piece">
-        <div class="piece-swatch"><span class="sw" style="background:#1d447e"></span><span class="sw" style="background:#d05d88"></span><span class="sw" style="background:#171b21"></span><span class="sw" style="background:#f0f4fb"></span></div>
+        <div class="shot"><iframe src="https://jonasvh24.github.io/abc-barber-shop-80/" title="ABC Barber Shop" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a class="shot-veil" href="https://jonasvh24.github.io/abc-barber-shop-80/" target="_blank" rel="noopener" aria-label="Open ABC Barber Shop"></a></div>
         <div class="piece-body">
           <h3>ABC Barber Shop <span class="tag live">Live</span></h3>
           <p class="meta">barber · Antwerpen</p>
@@ -274,7 +192,142 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
         </div>
       </article>
       <article class="piece">
-        <div class="piece-swatch"><span class="sw" style="background:#856636"></span><span class="sw" style="background:#4187dd"></span><span class="sw" style="background:#211d17"></span><span class="sw" style="background:#fbf7f0"></span></div>
+        <div class="shot"><iframe src="https://jonasvh24.github.io/ampe-catherine-377/" title="Ampe / Catherine" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a class="shot-veil" href="https://jonasvh24.github.io/ampe-catherine-377/" target="_blank" rel="noopener" aria-label="Open Ampe / Catherine"></a></div>
+        <div class="piece-body">
+          <h3>Ampe / Catherine <span class="tag live">Live</span></h3>
+          <p class="meta">dentist · Brugge</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.9</span> · <span class="mono">8</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/ampe-catherine-377/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="shot"><iframe src="https://jonasvh24.github.io/ari-s-barbershop-strombeek-bever-52/" title="Ari&#x27;s Barbershop Strombeek-bever" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a class="shot-veil" href="https://jonasvh24.github.io/ari-s-barbershop-strombeek-bever-52/" target="_blank" rel="noopener" aria-label="Open Ari&#x27;s Barbershop Strombeek-bever"></a></div>
+        <div class="piece-body">
+          <h3>Ari&#x27;s Barbershop Strombeek-bever <span class="tag live">Live</span></h3>
+          <p class="meta">barber · Grimbergen</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">5.0</span> · <span class="mono">42</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/ari-s-barbershop-strombeek-bever-52/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="shot"><iframe src="https://jonasvh24.github.io/artan-s-barbershop-355/" title="Artan&#x27;s Barbershop" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a class="shot-veil" href="https://jonasvh24.github.io/artan-s-barbershop-355/" target="_blank" rel="noopener" aria-label="Open Artan&#x27;s Barbershop"></a></div>
+        <div class="piece-body">
+          <h3>Artan&#x27;s Barbershop <span class="tag live">Live</span></h3>
+          <p class="meta">barber · Brugge</p>
+          <span class="rate"><span class="stars">★★★★</span><span class="mono">4.4</span> · <span class="mono">126</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/artan-s-barbershop-355/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="shot"><iframe src="https://jonasvh24.github.io/barber-shop-montana-44/" title="Barber Shop Montana" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a class="shot-veil" href="https://jonasvh24.github.io/barber-shop-montana-44/" target="_blank" rel="noopener" aria-label="Open Barber Shop Montana"></a></div>
+        <div class="piece-body">
+          <h3>Barber Shop Montana <span class="tag live">Live</span></h3>
+          <p class="meta">salon · Wemmel</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.9</span> · <span class="mono">152</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/barber-shop-montana-44/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="shot"><iframe src="https://jonasvh24.github.io/barbershop-charlie-463/" title="Barbershop Charlie" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a class="shot-veil" href="https://jonasvh24.github.io/barbershop-charlie-463/" target="_blank" rel="noopener" aria-label="Open Barbershop Charlie"></a></div>
+        <div class="piece-body">
+          <h3>Barbershop Charlie <span class="tag live">Live</span></h3>
+          <p class="meta">salon · Knokke-Heist</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.9</span> · <span class="mono">142</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/barbershop-charlie-463/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="shot"><iframe src="https://jonasvh24.github.io/barberstarz-barbershop-67/" title="BarberStarz Barbershop" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a class="shot-veil" href="https://jonasvh24.github.io/barberstarz-barbershop-67/" target="_blank" rel="noopener" aria-label="Open BarberStarz Barbershop"></a></div>
+        <div class="piece-body">
+          <h3>BarberStarz Barbershop <span class="tag live">Live</span></h3>
+          <p class="meta">barber · Fresno</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.6</span> · <span class="mono">385</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/barberstarz-barbershop-67/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="shot"><iframe src="https://jonasvh24.github.io/becca-s-special-effects-582/" title="Becca&#x27;s Special Effects" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a class="shot-veil" href="https://jonasvh24.github.io/becca-s-special-effects-582/" target="_blank" rel="noopener" aria-label="Open Becca&#x27;s Special Effects"></a></div>
+        <div class="piece-body">
+          <h3>Becca&#x27;s Special Effects <span class="tag live">Live</span></h3>
+          <p class="meta">salon · Sweetwater</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.9</span> · <span class="mono">101</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/becca-s-special-effects-582/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="shot"><iframe src="https://jonasvh24.github.io/brabo-s-hand-barbershop-8/" title="Brabo&#x27;s Hand Barbershop" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a class="shot-veil" href="https://jonasvh24.github.io/brabo-s-hand-barbershop-8/" target="_blank" rel="noopener" aria-label="Open Brabo&#x27;s Hand Barbershop"></a></div>
+        <div class="piece-body">
+          <h3>Brabo&#x27;s Hand Barbershop <span class="tag live">Live</span></h3>
+          <p class="meta">barber · Antwerpen</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.6</span> · <span class="mono">193</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/brabo-s-hand-barbershop-8/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="shot"><iframe src="https://jonasvh24.github.io/bushwick-barbershop-194/" title="Bushwick Barbershop" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a class="shot-veil" href="https://jonasvh24.github.io/bushwick-barbershop-194/" target="_blank" rel="noopener" aria-label="Open Bushwick Barbershop"></a></div>
+        <div class="piece-body">
+          <h3>Bushwick Barbershop <span class="tag live">Live</span></h3>
+          <p class="meta">barber · Los Angeles</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.8</span> · <span class="mono">282</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/bushwick-barbershop-194/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="shot"><iframe src="https://jonasvh24.github.io/downtown-barbershop-352/" title="Downtown Barbershop" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a class="shot-veil" href="https://jonasvh24.github.io/downtown-barbershop-352/" target="_blank" rel="noopener" aria-label="Open Downtown Barbershop"></a></div>
+        <div class="piece-body">
+          <h3>Downtown Barbershop <span class="tag live">Live</span></h3>
+          <p class="meta">barber · Brugge</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.9</span> · <span class="mono">195</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/downtown-barbershop-352/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="shot"><iframe src="https://jonasvh24.github.io/downtown-barbershop-visalia-77/" title="Downtown Barbershop Visalia" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a class="shot-veil" href="https://jonasvh24.github.io/downtown-barbershop-visalia-77/" target="_blank" rel="noopener" aria-label="Open Downtown Barbershop Visalia"></a></div>
+        <div class="piece-body">
+          <h3>Downtown Barbershop Visalia <span class="tag live">Live</span></h3>
+          <p class="meta">barber · Visalia</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.8</span> · <span class="mono">50</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/downtown-barbershop-visalia-77/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="shot"><iframe src="https://jonasvh24.github.io/essential-barbershop-1/" title="Essential Barbershop" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a class="shot-veil" href="https://jonasvh24.github.io/essential-barbershop-1/" target="_blank" rel="noopener" aria-label="Open Essential Barbershop"></a></div>
+        <div class="piece-body">
+          <h3>Essential Barbershop <span class="tag live">Live</span></h3>
+          <p class="meta">barber · Antwerpen</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">5.0</span> · <span class="mono">101</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/essential-barbershop-1/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="shot"><iframe src="https://jonasvh24.github.io/fade-kings-barber-shop-125/" title="Fade kings barber shop" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a class="shot-veil" href="https://jonasvh24.github.io/fade-kings-barber-shop-125/" target="_blank" rel="noopener" aria-label="Open Fade kings barber shop"></a></div>
+        <div class="piece-body">
+          <h3>Fade kings barber shop <span class="tag live">Live</span></h3>
+          <p class="meta">barber · Lynnwood</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.6</span> · <span class="mono">1309</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/fade-kings-barber-shop-125/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="shot"><iframe src="https://jonasvh24.github.io/jill-s-barbershop-667/" title="Jill&#x27;s BarberShop" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a class="shot-veil" href="https://jonasvh24.github.io/jill-s-barbershop-667/" target="_blank" rel="noopener" aria-label="Open Jill&#x27;s BarberShop"></a></div>
+        <div class="piece-body">
+          <h3>Jill&#x27;s BarberShop <span class="tag live">Live</span></h3>
+          <p class="meta">barber · Lewistown</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">5.0</span> · <span class="mono">2</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/jill-s-barbershop-667/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="shot"><iframe src="https://jonasvh24.github.io/kapsalon-efsane-347/" title="Kapsalon Efsane" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a class="shot-veil" href="https://jonasvh24.github.io/kapsalon-efsane-347/" target="_blank" rel="noopener" aria-label="Open Kapsalon Efsane"></a></div>
+        <div class="piece-body">
+          <h3>Kapsalon Efsane <span class="tag live">Live</span></h3>
+          <p class="meta">barber · Antwerpen</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.8</span> · <span class="mono">161</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/kapsalon-efsane-347/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="shot"><iframe src="https://jonasvh24.github.io/la-balayage-antwerp-334/" title="La Balayage Antwerp" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a class="shot-veil" href="https://jonasvh24.github.io/la-balayage-antwerp-334/" target="_blank" rel="noopener" aria-label="Open La Balayage Antwerp"></a></div>
         <div class="piece-body">
           <h3>La Balayage Antwerp <span class="tag live">Live</span></h3>
           <p class="meta">salon · Antwerpen</p>
@@ -283,12 +336,57 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
         </div>
       </article>
       <article class="piece">
-        <div class="piece-swatch"><span class="sw" style="background:#8c6a20"></span><span class="sw" style="background:#0194bf"></span><span class="sw" style="background:#211e17"></span><span class="sw" style="background:#fbf8f0"></span></div>
+        <div class="shot"><iframe src="https://jonasvh24.github.io/lv-barber-bruxelles-60/" title="LV Barber - Bruxelles" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a class="shot-veil" href="https://jonasvh24.github.io/lv-barber-bruxelles-60/" target="_blank" rel="noopener" aria-label="Open LV Barber - Bruxelles"></a></div>
         <div class="piece-body">
-          <h3>Family Dentist New York <span class="tag live">Live</span></h3>
-          <p class="meta">dentist · New York</p>
-          <span class="rate"><span class="stars">★★★★</span><span class="mono">4.3</span> · <span class="mono">4</span> reviews</span>
-          <a class="btn" href="https://family-dentist-new-york-305.netlify.app" target="_blank" rel="noopener">View the site &rarr;</a>
+          <h3>LV Barber - Bruxelles <span class="tag live">Live</span></h3>
+          <p class="meta">barber · Bruxelles</p>
+          <span class="rate"><span class="stars">★★★★</span><span class="mono">4.4</span> · <span class="mono">49</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/lv-barber-bruxelles-60/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="shot"><iframe src="https://jonasvh24.github.io/mido-barber-shop-57/" title="Mido Barber Shop" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a class="shot-veil" href="https://jonasvh24.github.io/mido-barber-shop-57/" target="_blank" rel="noopener" aria-label="Open Mido Barber Shop"></a></div>
+        <div class="piece-body">
+          <h3>Mido Barber Shop <span class="tag live">Live</span></h3>
+          <p class="meta">barber · Bruxelles</p>
+          <span class="rate"><span class="stars">★★★★</span><span class="mono">4.5</span> · <span class="mono">33</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/mido-barber-shop-57/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="shot"><iframe src="https://jonasvh24.github.io/monteleone-barber-shop-260/" title="Monteleone Barber Shop" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a class="shot-veil" href="https://jonasvh24.github.io/monteleone-barber-shop-260/" target="_blank" rel="noopener" aria-label="Open Monteleone Barber Shop"></a></div>
+        <div class="piece-body">
+          <h3>Monteleone Barber Shop <span class="tag live">Live</span></h3>
+          <p class="meta">barber · New Orleans</p>
+          <span class="rate"><span class="stars">★★★★</span><span class="mono">4.5</span> · <span class="mono">137</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/monteleone-barber-shop-260/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="shot"><iframe src="https://jonasvh24.github.io/roots-hair-studio-642/" title="Roots Hair Studio" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a class="shot-veil" href="https://jonasvh24.github.io/roots-hair-studio-642/" target="_blank" rel="noopener" aria-label="Open Roots Hair Studio"></a></div>
+        <div class="piece-body">
+          <h3>Roots Hair Studio <span class="tag live">Live</span></h3>
+          <p class="meta">salon · Three Forks</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">4.8</span> · <span class="mono">35</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/roots-hair-studio-642/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="shot"><iframe src="https://jonasvh24.github.io/the-barber-house-brugge-357/" title="The barber house brugge" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a class="shot-veil" href="https://jonasvh24.github.io/the-barber-house-brugge-357/" target="_blank" rel="noopener" aria-label="Open The barber house brugge"></a></div>
+        <div class="piece-body">
+          <h3>The barber house brugge <span class="tag live">Live</span></h3>
+          <p class="meta">barber · Brugge</p>
+          <span class="rate"><span class="stars">★★★★★</span><span class="mono">5.0</span> · <span class="mono">22</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/the-barber-house-brugge-357/" target="_blank" rel="noopener">View the site &rarr;</a>
+        </div>
+      </article>
+      <article class="piece">
+        <div class="shot"><iframe src="https://jonasvh24.github.io/vendetta-s-salon-580/" title="Vendetta&#x27;s Salon" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe><a class="shot-veil" href="https://jonasvh24.github.io/vendetta-s-salon-580/" target="_blank" rel="noopener" aria-label="Open Vendetta&#x27;s Salon"></a></div>
+        <div class="piece-body">
+          <h3>Vendetta&#x27;s Salon <span class="tag live">Live</span></h3>
+          <p class="meta">salon · Abilene</p>
+          <span class="rate"><span class="stars">★★★★</span><span class="mono">4.5</span> · <span class="mono">177</span> reviews</span>
+          <a class="btn" href="https://jonasvh24.github.io/vendetta-s-salon-580/" target="_blank" rel="noopener">View the site &rarr;</a>
         </div>
       </article>
     </div>
@@ -329,8 +427,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
         <input type="hidden" name="form-name" value="meeting-request">
         <p class="hp"><label>Leave this empty <input name="bot-field"></label></p>
         <div class="cal-grid">
-<div class="cal-day"><div class="cal-head"><b>Wed</b><span>29 Jul</span></div><div class="cal-slots"><label class="slot"><input type="radio" name="slot" value="2026-07-29 16:00" required><span>16:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-29 16:30" required><span>16:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-29 17:00" required><span>17:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-29 17:30" required><span>17:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-29 18:00" required><span>18:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-29 18:30" required><span>18:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-29 19:00" required><span>19:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-29 19:30" required><span>19:30</span></label></div></div>
-<div class="cal-day"><div class="cal-head"><b>Thu</b><span>30 Jul</span></div><div class="cal-slots"><label class="slot"><input type="radio" name="slot" value="2026-07-30 16:00" required><span>16:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-30 16:30" required><span>16:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-30 17:00" required><span>17:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-30 17:30" required><span>17:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-30 18:00" required><span>18:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-30 18:30" required><span>18:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-30 19:00" required><span>19:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-30 19:30" required><span>19:30</span></label></div></div>
+<div class="cal-day"><div class="cal-head"><b>Thu</b><span>30 Jul</span></div><div class="cal-slots"><label class="slot"><input type="radio" name="slot" value="2026-07-30 18:30" required><span>18:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-30 19:00" required><span>19:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-30 19:30" required><span>19:30</span></label></div></div>
 <div class="cal-day"><div class="cal-head"><b>Fri</b><span>31 Jul</span></div><div class="cal-slots"><label class="slot"><input type="radio" name="slot" value="2026-07-31 16:00" required><span>16:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-31 16:30" required><span>16:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-31 17:00" required><span>17:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-31 17:30" required><span>17:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-31 18:00" required><span>18:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-31 18:30" required><span>18:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-31 19:00" required><span>19:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-07-31 19:30" required><span>19:30</span></label></div></div>
 <div class="cal-day"><div class="cal-head"><b>Mon</b><span>3 Aug</span></div><div class="cal-slots"><label class="slot"><input type="radio" name="slot" value="2026-08-03 16:00" required><span>16:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-03 16:30" required><span>16:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-03 17:00" required><span>17:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-03 17:30" required><span>17:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-03 18:00" required><span>18:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-03 18:30" required><span>18:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-03 19:00" required><span>19:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-03 19:30" required><span>19:30</span></label></div></div>
 <div class="cal-day"><div class="cal-head"><b>Tue</b><span>4 Aug</span></div><div class="cal-slots"><label class="slot"><input type="radio" name="slot" value="2026-08-04 16:00" required><span>16:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-04 16:30" required><span>16:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-04 17:00" required><span>17:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-04 17:30" required><span>17:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-04 18:00" required><span>18:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-04 18:30" required><span>18:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-04 19:00" required><span>19:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-04 19:30" required><span>19:30</span></label></div></div>
@@ -341,6 +438,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <div class="cal-day"><div class="cal-head"><b>Tue</b><span>11 Aug</span></div><div class="cal-slots"><label class="slot"><input type="radio" name="slot" value="2026-08-11 16:00" required><span>16:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-11 16:30" required><span>16:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-11 17:00" required><span>17:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-11 17:30" required><span>17:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-11 18:00" required><span>18:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-11 18:30" required><span>18:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-11 19:00" required><span>19:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-11 19:30" required><span>19:30</span></label></div></div>
 <div class="cal-day"><div class="cal-head"><b>Wed</b><span>12 Aug</span></div><div class="cal-slots"><label class="slot"><input type="radio" name="slot" value="2026-08-12 16:00" required><span>16:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-12 16:30" required><span>16:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-12 17:00" required><span>17:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-12 17:30" required><span>17:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-12 18:00" required><span>18:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-12 18:30" required><span>18:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-12 19:00" required><span>19:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-12 19:30" required><span>19:30</span></label></div></div>
 <div class="cal-day"><div class="cal-head"><b>Thu</b><span>13 Aug</span></div><div class="cal-slots"><label class="slot"><input type="radio" name="slot" value="2026-08-13 16:00" required><span>16:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-13 16:30" required><span>16:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-13 17:00" required><span>17:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-13 17:30" required><span>17:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-13 18:00" required><span>18:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-13 18:30" required><span>18:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-13 19:00" required><span>19:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-13 19:30" required><span>19:30</span></label></div></div>
+<div class="cal-day"><div class="cal-head"><b>Fri</b><span>14 Aug</span></div><div class="cal-slots"><label class="slot"><input type="radio" name="slot" value="2026-08-14 16:00" required><span>16:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-14 16:30" required><span>16:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-14 17:00" required><span>17:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-14 17:30" required><span>17:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-14 18:00" required><span>18:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-14 18:30" required><span>18:30</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-14 19:00" required><span>19:00</span></label><label class="slot"><input type="radio" name="slot" value="2026-08-14 19:30" required><span>19:30</span></label></div></div>
         </div>
         <div class="cal-fields">
           <label>Your name <input name="name" required placeholder="Marie Dubois"></label>
